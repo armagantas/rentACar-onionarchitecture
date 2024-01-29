@@ -46,7 +46,7 @@ namespace Core.Persistence.Repositories
         Task<TEntity> UpdateAsync(TEntity entity);
         Task<ICollection<TEntity>> UpdateRangeAsync(ICollection<TEntity> entities);
         Task<TEntity> DeleteAsync(TEntity entity, bool permanent = false);
-        Task<ICollection<TEntity>> DeleteRangeAsync(ICollection<TEntity> entites, bool permanent = false);
+        Task<ICollection<TEntity>> DeleteRangeAsync(ICollection<TEntity> entities, bool permanent = false);
 
         
     }
