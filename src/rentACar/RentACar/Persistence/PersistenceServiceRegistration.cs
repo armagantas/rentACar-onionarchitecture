@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Persistence.Contexts;
+using Persistence.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +23,7 @@ namespace Persistence
                 
             });
 
-            services.AddScoped<IBrandRepository, IBrandRepository>();
+            services.AddScoped<IBrandRepository, BrandRepository>();
             return services;
         }
     }
