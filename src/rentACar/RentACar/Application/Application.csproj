@@ -13,7 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Brands\Commands\Delete\" />
     <Folder Include="Features\Brands\Constants\" />
     <Folder Include="Features\Brands\Rules\" />
     <Folder Include="Features\Models\" />
