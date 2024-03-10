@@ -1,4 +1,5 @@
 ﻿using Application.Features.Models.Queries.GetList;
+using Application.Features.Models.Queries.GetListByDynamic;
 using AutoMapper;
 using Core.Application.Responses;
 using Core.Persistence.Paging;
@@ -15,7 +16,13 @@ namespace Application.Features.Models.Profiles
                 .ForMember(destinationMember: c => c.FuelName, memberOptions: opt => opt.MapFrom(c => c.Fuel.Name))
                 .ForMember(destinationMember: c => c.TransmissionLane, memberOptions: opt => opt.MapFrom(c => c.Transmission.Name))
                 .ReverseMap();
+            CreateMap<Model, GetListByDynamicModelListItemDto>()
+                .ForMember(destinationMember: c => c.BrandName, memberOptions: opt => opt.MapFrom(c => c.Brand.Name))
+                .ForMember(destinationMember: c => c.FuelName, memberOptions: opt => opt.MapFrom(c => c.Fuel.Name))
+                .ForMember(destinationMember: c => c.TransmissionLane, memberOptions: opt => opt.MapFrom(c => c.Transmission.Name))
+                .ReverseMap();
             CreateMap<Paginate<Model>, GetListResponse<GetListModelListItemDto>>().ReverseMap();
+            CreateMap<Paginate<Model>, GetListResponse<GetListByDynamicModelListItemDto>>().ReverseMap();
         }
     }
 }
