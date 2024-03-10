@@ -17,11 +17,16 @@ namespace Persistence
     {
         public static IServiceCollection AddPersistenceServices(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<BaseDbContext>(options =>
+            /*services.AddDbContext<BaseDbContext>(options =>
             {
                 options.UseInMemoryDatabase("nArchitectureDB");
                 
-            });
+            });*/
+
+            services.AddDbContext<BaseDbContext>(options =>
+            
+                options.UseSqlServer(configuration.GetConnectionString("RentACarDB"))
+            );
 
             services.AddScoped<IBrandRepository, BrandRepository>();
             return services;
