@@ -1,4 +1,5 @@
 using Application;
+using Core.CrossCuttingConcerns.Exceptions.Extensions;
 using Persistence;
 
 
@@ -21,6 +22,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+if(app.Environment.IsProduction())
+{
+    app.ConfigureCustomExceptionMiddleware();
+}
+
 
 app.UseHttpsRedirection();
 
