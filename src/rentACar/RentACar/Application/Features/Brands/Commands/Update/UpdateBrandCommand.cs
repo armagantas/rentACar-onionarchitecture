@@ -18,7 +18,7 @@ namespace Application.Features.Brands.Commands.Update
 
         public string CacheKey => "";
 
-        public bool BypassCache => false
+        public bool BypassCache => false;
 
         public string? CacheGroupKey => "GetBrands";
 

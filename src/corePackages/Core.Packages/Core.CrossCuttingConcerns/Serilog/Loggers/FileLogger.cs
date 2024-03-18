@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core.CrossCuttingConcerns.Serilog.Logger
+namespace Core.CrossCuttingConcerns.Serilog.Loggers
 {
     public class FileLogger : LoggerServiceBase
     {

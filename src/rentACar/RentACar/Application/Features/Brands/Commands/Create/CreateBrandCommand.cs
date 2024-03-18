@@ -20,7 +20,7 @@ namespace Application.Features.Brands.Commands.Create
 
         public string CacheKey => "";
 
-        public bool BypassCache => false
+        public bool BypassCache => false;
 
         public string? CacheGroupKey => "GetBrands";
 
