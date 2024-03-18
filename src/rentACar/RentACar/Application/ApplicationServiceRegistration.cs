@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Core.Application.Pipelines.Transaction;
 using Core.Application.Pipelines.Caching;
+using Core.Application.Pipelines.Logging;
 
 namespace Application
 {
@@ -27,6 +28,7 @@ namespace Application
                 configuration.AddOpenBehavior(typeof(TransactionScopeBehavior<,>));
                 configuration.AddOpenBehavior(typeof(CachingBehavior<,>));
                 configuration.AddOpenBehavior(typeof(CacheRemovingBehavior<,>));
+                configuration.AddOpenBehavior(typeof(LoggingBehavior<,>));
 
             });
 
